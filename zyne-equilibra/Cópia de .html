@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site com Barra de Pesquisa</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Bem-vindo ao nosso site!</h1>
+        <div class="search-box">
+            <input type="text" placeholder="Pesquisar..." id="search-input">
+            <button onclick="search()">Buscar</button>
+        </div>
+    </div>
+
+    <script>
+        function search() {
+            const query = document.getElementById('search-input').value;
+            if (query) {
+                alert(`Você pesquisou por: ${query}`);
+            } else {
+                alert('Por favor, insira um termo de pesquisa.');
+            }
+        }
+    </script>
+</body>
+</html>
+
+(coloque tudo isso em html css js separados e funcionais)

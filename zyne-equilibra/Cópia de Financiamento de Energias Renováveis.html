@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Financiamento de Energias Renováveis</title>
+    <link rel="stylesheet" href="1.css">
+</head>
+<body>
+    <header>
+        <h1>Financiamento de Energias Renováveis</h1>
+        <p>Investir em energias renováveis é fundamental para um futuro mais sustentável. Conheça as opções de financiamento e como contribuir para um mundo mais verde.</p>
+    </header>
+
+    <section class="content">
+        <h2>Por que investir em energias renováveis?</h2>
+        <p>As energias renováveis, como a solar, eólica e hídrica, são essenciais para reduzir os impactos ambientais causados por fontes de energia não renováveis. Além disso, o financiamento dessas alternativas pode gerar benefícios econômicos e sociais significativos.</p>
+        
+        <h3>Opções de financiamento disponíveis</h3>
+        <ul>
+            <li>Créditos e subsídios para a instalação de painéis solares</li>
+            <li>Linhas de crédito para a construção de parques eólicos</li>
+            <li>Incentivos fiscais para a implementação de soluções sustentáveis</li>
+        </ul>
+
+        <button id="ideaButton" onclick="toggleIdeaForm()">Adicionar a Sua Ideia</button>
+
+        <!-- Formulário para adicionar a ideia -->
+        <div id="ideaForm">
+            <textarea id="ideaInput" rows="4" placeholder="Escreva sua ideia aqui..."></textarea><br>
+            <button id="addIdeaButton" onclick="addIdea()">Adicionar Ideia</button>
+            <button id="backButton" onclick="backToMain()">Voltar</button>
+        </div>
+
+        <!-- Lista de ideias -->
+        <div id="ideaList">
+            <h3>Ideias Adicionadas:</h3>
+            <ul id="ideasContainer">
+                <!-- As ideias adicionadas aparecerão aqui -->
+            </ul>
+        </div>
+    </section>
+
+    <div id="sla">
+        <button>
+            <a href="index.html">voltar a pagina anterior</a>
+        </button>
+    
+
+    <footer>
+        <p>&copy; 2025 Financiamento de Energias Renováveis. Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        // Função para alternar a visibilidade do formulário
+        function toggleIdeaForm() {
+            document.getElementById('ideaForm').style.display = 'block';
+            document.getElementById('ideaButton').style.display = 'none'; // Esconde o botão de adicionar ideia
+        }
+
+        // Função para adicionar a ideia
+        function addIdea() {
+            var idea = document.getElementById('ideaInput').value;
+            if (idea) {
+                // Cria um novo item de lista para a ideia
+                var li = document.createElement('li');
+                li.textContent = idea;
+
+                // Adiciona o item à lista de ideias
+                document.getElementById('ideasContainer').appendChild(li);
+
+                // Exibe uma mensagem de sucesso
+                alert("Sua ideia foi registrada! Obrigado por contribuir para um futuro mais sustentável.");
+                
+                // Limpa o campo de texto
+                document.getElementById('ideaInput').value = '';
+                
+                // Volta para a tela principal
+                backToMain();
+            } else {
+                alert("Por favor, escreva sua ideia antes de adicionar.");
+            }
+        }
+
+        // Função para voltar à tela principal
+        function backToMain() {
+            document.getElementById('ideaForm').style.display = 'none';
+            document.getElementById('ideaButton').style.display = 'inline-block'; // Exibe o botão de adicionar ideia novamente
+        }
+
+        // Função para voltar à página anterior
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+</body>
+</html>

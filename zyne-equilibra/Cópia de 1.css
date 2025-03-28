@@ -1,0 +1,99 @@
+/* Estilos principais */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* Estilos do cabeçalho */
+header {
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Estilos do conteúdo */
+.content {
+    padding: 20px;
+}
+
+.content h2, .content h3 {
+    color: #4CAF50;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    margin: 5px 0;
+}
+
+/* Botões */
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Formulário para adicionar ideia */
+#ideaForm {
+    display: none;
+    margin-top: 20px;
+}
+
+#ideaInput {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+}
+
+#addIdeaButton, #backButton {
+    margin-top: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#backButton {
+    background-color: #f44336;
+}
+
+#backButton:hover {
+    background-color: #e53935;
+}
+
+/* Estilo para a lista de ideias */
+#ideaList {
+    margin-top: 20px;
+}
+
+#ideasContainer {
+    padding: 0;
+}
+
+#ideasContainer li {
+    background-color: #e8f5e9;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+#sla button {
+    background-color: #000000; 
+    color: white; 
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }

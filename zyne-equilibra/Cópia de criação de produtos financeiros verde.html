@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criação de Produtos Financeiros</title>
+    <link rel="stylesheet" href="criação.css">
+</head>
+<body>
+    <header>
+        <h1>Produto Financeiro: Investimento de Renda Fixa</h1>
+        <p>Invista com segurança e rentabilidade, sem a volatilidade do mercado de ações. Ideal para quem busca um investimento conservador.</p>
+    </header>
+
+    <section id="benefits">
+        <h2>Benefícios do Produto</h2>
+        <ul>
+            <li>Rentabilidade estável e segura.</li>
+            <li>Segurança garantida pelo FGC.</li>
+            <li>Baixo risco de perdas.</li>
+            <li>Investimento com prazos flexíveis.</li>
+        </ul>
+    </section>
+
+    <section id="how-it-works">
+        <h2>Como Funciona</h2>
+        <ol>
+            <li>Escolha o valor a ser investido.</li>
+            <li>Defina o prazo do investimento.</li>
+            <li>Veja a rentabilidade ao final do período.</li>
+        </ol>
+    </section>
+
+    <section id="features">
+        <h2>Características Principais</h2>
+        <p>Taxas de juros a partir de 5% ao ano. Prazo mínimo de 6 meses. Limite de investimento de até R$ 100.000,00.</p>
+    </section>
+
+    <section id="simulator">
+        <h2>Simulador de Rentabilidade</h2>
+        <p>Simule sua rentabilidade com diferentes valores e prazos:</p>
+        <label for="amount">Valor Investido:</label>
+        <input type="number" id="amount" placeholder="R$ 1.000,00">
+        
+        <label for="time">Prazo (meses):</label>
+        <input type="number" id="time" placeholder="12">
+
+        <button onclick="calculateRentability()">Calcular Rentabilidade</button>
+        
+        <p id="result">Rentabilidade: R$ 0,00</p>
+    </section>
+
+    <section id="testimonials">
+        <h2>Depoimentos de Clientes</h2>
+        <p>"Investi R$ 5.000,00 e fiquei muito satisfeito com a rentabilidade!" - João Silva</p>
+        <p>"Excelente opção para quem busca um investimento de baixo risco." - Maria Oliveira</p>
+    </section>
+
+    <section id="faq">
+        <h2>Perguntas Frequentes</h2>
+        <ul>
+            <li><strong>Quais são as taxas de juros?</strong> As taxas variam de acordo com o prazo e valor investido, mas começam em 5% ao ano.</li>
+            <li><strong>Posso cancelar o investimento?</strong> Não, o investimento é feito para o prazo acordado, mas você pode resgatar ao final do período.</li>
+        </ul>
+    </section>
+
+    <section id="cta">
+        <h2>Pronto para investir?</h2>
+        <button onclick="window.location.href='https://exemplo.com/solicitar'">Solicitar Agora</button>
+        <button onclick="window.location.href='https://exemplo.com/simulacao'">Fazer Simulação</button>
+    </section>
+
+    <div id="sla">
+      <button>
+          <a href="index.html">voltar a pagina anterior</a>
+      </button>
+
+    <footer>
+        <p>&copy; 2025 Produtos Financeiros. Todos os direitos reservados.</p>
+        <p><a href="#contact">Contato</a> | <a href="#privacy">Política de Privacidade</a></p>
+    </footer>
+
+   <script>
+    // Função para calcular a rentabilidade
+function calculateRentability() {
+    const amount = parseFloat(document.getElementById('amount').value);
+    const time = parseInt(document.getElementById('time').value);
+
+    if (isNaN(amount) || isNaN(time) || amount <= 0 || time <= 0) {
+        alert("Por favor, insira valores válidos.");
+        return;
+    }
+
+    // Exemplo de cálculo de rentabilidade (5% ao ano)
+    const interestRate = 0.05; // 5% ao ano
+    const yearlyRentability = amount * interestRate * (time / 12); // Rentabilidade proporcional ao tempo em meses
+
+    // Exibe o resultado
+    document.getElementById('result').textContent = `Rentabilidade: R$ ${yearlyRentability.toFixed(2)}`;
+}
+   </script>
+</body>
+</html>

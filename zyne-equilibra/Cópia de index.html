@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu de Navegação com Barra de Pesquisa</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Barra de Navegação -->
+    <div class="navbar">
+        <div class="menu-dropdown">
+            <a href="#">Categorias ▼</a>
+            <div class="menu-dropdown-content">
+                <a href="Financiamento de Energias Renováveis.html">Financiamento de Energias Renováveis</a>
+
+            </div>
+        </div>
+        <a href="criação de produtos financeiros verde.html">Criação de Produtos Financeiros Verde</a> <!-- já feito -->
+        <a href="investimento em economia circular.html">Investimentos em Economia Circular</a> <!-- já feito -->
+        <a href="Apoio a Pequenos Negócios Sustentáveis.html">Apoio a Pequenos Negócios Sustentáveis</a> <!-- já feito -->
+        <a href="Transparência e Relatórios ESG.html">Transparência e Relatórios ESG</a> <!-- já feito -->
+        <a href="tecnologia para a sustentabilidade.html">Tecnologia para a Sustentabilidade</a> <!-- já feito -->
+        <a href="Parcerias com ONGs e Projetos Ambientais.html">Parcerias com ONGs e Projetos Ambientais</a> <!-- já feito -->
+        <a href="Promoção de Investimentos Responsáveis.html">Promoção de Investimentos Responsáveis</a>  <!-- já feito -->
+    </div>
+
+    <!-- Caixa de Pesquisa -->
+    <div class="container">
+        <h1>Bem-vindo ao nosso site!</h1>
+        <div class="search-box">
+            <input type="text" placeholder="Pesquisar..." id="search-input">
+            <button onclick="search()">Buscar</button>
+        </div>
+    </div>
+
+    <script>
+        function search() {
+            const query = document.getElementById('search-input').value;
+            if (query) {
+                alert(`Você pesquisou por: ${query}`);
+            } else {
+                alert('Por favor, insira um termo de pesquisa.');
+            }
+        }
+    </script>
+
+</body>
+</html>
